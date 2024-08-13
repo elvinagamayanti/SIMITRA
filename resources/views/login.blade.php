@@ -36,7 +36,13 @@
             </div>
 
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                <form class="space-y-6" action="#" method="POST">
+                @if(session('error'))
+                <div class="alert alert-danger">
+                    <b>Opps!</b> {{session('error')}}
+                </div>
+                @endif
+                <form class="space-y-6" action="{{ route('actionlogin') }}" method="POST">
+                @csrf
                     <div>
                         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Alamat Email</label>
                         <div class="mt-2">
