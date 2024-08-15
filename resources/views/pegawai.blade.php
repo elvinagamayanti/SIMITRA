@@ -30,55 +30,23 @@
                             <th scope="col" class="px-6 py-3">No</th>
                             <th scope="col" class="px-6 py-3">Nama</th>
                             <th scope="col" class="px-6 py-3">NIP</th>
+                            <th scope="col" class="px-6 py-3">Email</th>
                             <th scope="col" class="px-6 py-3">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($employees as $index => $employee)
                         <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">1</td>
-                            <td class="px-6 py-4">Putri Lestari</td>
-                            <td class="px-6 py-4">123123123</td>
+                            <td class="px-6 py-4">{{ $index + 1 }}</td>
+                            <td class="px-6 py-4">{{ $employee['name'] }}</td>
+                            <td class="px-6 py-4">{{ $employee['nip'] }}</td>
+                            <td class="px-6 py-4">{{ $employee['email'] }}</td>
                             <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
+                                <button onclick="window.location='{{ route('pegawaidetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
                                 <button onclick="window.location='{{ route('editpegawai') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
                             </td>
                         </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">2</td>
-                            <td class="px-6 py-4">Rissa Erviana</td>
-                            <td class="px-6 py-4">123123124</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editpegawai') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">3</td>
-                            <td class="px-6 py-4">Elvina Gamayanti</td>
-                            <td class="px-6 py-4">123123125</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editpegawai') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">4</td>
-                            <td class="px-6 py-4">Nur Zaman</td>
-                            <td class="px-6 py-4">123123126</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editpegawai') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">5</td>
-                            <td class="px-6 py-4">Bintang Purnama</td>
-                            <td class="px-6 py-4">123123127</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editpegawai') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

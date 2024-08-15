@@ -27,57 +27,25 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-200">
                         <tr>
                             <th scope="col" class="px-6 py-3">No</th>
-                            <th scope="col" class="px-6 py-3">Nama Mitra</th>
+                            <th scope="col" class="px-6 py-3">Nama</th>
                             <th scope="col" class="px-6 py-3">ID Sobat</th>
+                            <th scope="col" class="px-6 py-3">Email</th>
                             <th scope="col" class="px-6 py-3">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($mitras as $index => $mitra)
                         <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">1</td>
-                            <td class="px-6 py-4">Bagus Sunandar</td>
-                            <td class="px-6 py-4">35717272</td>
+                            <td class="px-6 py-4">{{ $index + 1 }}</td>
+                            <td class="px-6 py-4">{{ $mitra['name'] }}</td>
+                            <td class="px-6 py-4">{{ $mitra['id_sobat'] }}</td>
+                            <td class="px-6 py-4">{{ $mitra['email'] }}</td>
                             <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
+                                <button onclick="window.location='{{ route('mitradetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
                                 <button onclick="window.location='{{ route('editmitra') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
                             </td>
                         </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">2</td>
-                            <td class="px-6 py-4">Bagas Sunandar</td>
-                            <td class="px-6 py-4">35717273</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editmitra') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">3</td>
-                            <td class="px-6 py-4">Bugus Sunandar</td>
-                            <td class="px-6 py-4">35717274</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editmitra') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">4</td>
-                            <td class="px-6 py-4">Bigas Sunandar</td>
-                            <td class="px-6 py-4">35717275</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editmitra') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4">5</td>
-                            <td class="px-6 py-4">Bogas Sunandar</td>
-                            <td class="px-6 py-4">35717276</td>
-                            <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editmitra') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
-                            </td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
