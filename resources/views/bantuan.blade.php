@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="bg-white dark:bg-gray-900">
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Frequently Asked Questions</h1>
+<h1 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Frequently Asked Questions</h1>
 
     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
     <h2 id="accordion-flush-heading-1">

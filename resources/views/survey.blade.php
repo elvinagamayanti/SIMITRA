@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto p-4 dark:bg-gray-900 dark:text-gray-200">
-    <h1 class="text-3xl font-bold mb-4">Survei</h1>
+    <h1 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Survei</h1>
 
     <div class="mt-6">
         <div class="flex justify-between mb-4">
@@ -53,8 +53,10 @@
                             <td class="px-6 py-4">{{ $survey['tanggal_mulai'] }}</td>
                             <td class="px-6 py-4">{{ $survey['tanggal_berakhir'] }}</td>
                             <td class="px-6 py-4">
-                                <button onclick="window.location='{{ route('surveydetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                <button onclick="window.location='{{ route('editpegawai') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
+                                <div class="flex space-x-2">
+                                    <button onclick="window.location='{{ route('surveydetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
+                                    <button onclick="window.location='{{ route('editpegawai') }}'" class="px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
+                                </div>
                             </td>
                         </tr>
                         @endforeach

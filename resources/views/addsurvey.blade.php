@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto p-4 dark:bg-gray-900 dark:text-gray-200">
-    <h1 class="text-3xl font-bold mb-4">Tambah Survei</h1>
+    <h1 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Tambah Survei</h1>
 
     <form action="{{ route('survey.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         @csrf
