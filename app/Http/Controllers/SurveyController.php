@@ -18,5 +18,5 @@ class SurveyController extends Controller
         $user = Auth::user(); // Mendapatkan data pengguna yang login
         return view('addsurvey', compact('user')); // Mengirim data ke view
     }
-    
+
 }

@@ -13,7 +13,11 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::post('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
 
 Route::get('/survey', [SurveyController::class, 'index'])->name('survey')->middleware('auth');
+
 Route::get('/survey/add', [SurveyController::class, 'add'])->name('addsurvey')->middleware('auth');
+
+Route::get('/survey/add', [SurveyController::class, 'add'])->name('addsurvey')->middleware('auth');
+Route::post('/survey/add', [SurveyController::class, 'store'])->name('survey.store');
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::post('/password/update', [ProfileController::class, 'updatePassword'])->name('password.update');
