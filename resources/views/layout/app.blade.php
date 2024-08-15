@@ -12,7 +12,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
-<body class="sidebar-open">
+<body class="sidebar-open dark:bg-gray-900">
 
     <!-- Navbar -->
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
