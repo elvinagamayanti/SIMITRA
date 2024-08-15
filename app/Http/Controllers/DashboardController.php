@@ -12,4 +12,10 @@ class DashboardController extends Controller
         $user = Auth::user(); // Mendapatkan data pengguna yang login
         return view('dashboard', compact('user')); // Mengirim data ke view
     }
+
+    public function bantuan()
+    {
+        $user = Auth::user(); // Mendapatkan data pengguna yang login
+        return view('bantuan', compact('user')); // Mengirim data ke view
+    }
 }
