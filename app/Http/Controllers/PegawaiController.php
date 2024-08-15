@@ -73,12 +73,12 @@ class PegawaiController extends Controller
 
     public function add()
     {
-        return view('addpegawai', compact('user')); // Mengirim data ke view
+        return view('addpegawai', ['user' => $this->user]); // Mengirim data ke view
     }
 
     public function edit()
     {
-        return view('editpegawai', compact('user')); // Mengirim data ke view
+        return view('editpegawai', ['user' => $this->user]); // Mengirim data ke view
     }
 
     public function show($id)

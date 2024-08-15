@@ -64,11 +64,11 @@ class MitraController extends Controller
 
     public function add()
     {
-        return view('addmitra', compact('user')); // Mengirim data ke view
+        return view('addmitra', ['user' => $this->user]); // Mengirim data ke view
     }
     public function edit()
     {
-        return view('editmitra', compact('user')); // Mengirim data ke view
+        return view('editmitra', ['user' => $this->user]); // Mengirim data ke view
     }
 
     public function show($id)
