@@ -34,6 +34,7 @@
                 <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr>
+                            <th scope="col" class="px-6 py-3">No</th>
                             <th scope="col" class="px-6 py-3">Nama Survei</th>
                             <th scope="col" class="px-6 py-3">Kode</th>
                             <th scope="col" class="px-6 py-3">Ketua Tim</th>
@@ -43,17 +44,19 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($surveys as $index => $survey)
                         <tr class="bg-white border-b">
-                            <td class="px-6 py-4">Survei1</td>
-                            <td class="px-6 py-4">12</td>
-                            <td class="px-6 py-4">123</td>
-                            <td class="px-6 py-4">01-01-2024</td>
-                            <td class="px-6 py-4">31-01-2024</td>
+                            <td class="px-6 py-4">{{ $index + 1 }}</td>
+                            <td class="px-6 py-4">{{ $survey['name'] }}</td>
+                            <td class="px-6 py-4">{{ $survey['kode'] }}</td>
+                            <td class="px-6 py-4">{{ $survey['ketua_tim'] }}</td>
+                            <td class="px-6 py-4">{{ $survey['tanggal_mulai'] }}</td>
+                            <td class="px-6 py-4">{{ $survey['tanggal_berakhir'] }}</td>
                             <td class="px-6 py-4">
-                                <button class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Lihat</button>
-                                <button class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">Nilai</button>
+                                <a href="{{ route('surveydetail', ['id' => $index + 1]) }}" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Lihat</a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

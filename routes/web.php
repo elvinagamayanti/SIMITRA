@@ -19,5 +19,7 @@ Route::get('/survey/add', [SurveyController::class, 'add'])->name('addsurvey')->
 Route::get('/survey/add', [SurveyController::class, 'add'])->name('addsurvey')->middleware('auth');
 Route::post('/survey/add', [SurveyController::class, 'store'])->name('survey.store');
 
+Route::get('/survey/{id}', [SurveyController::class, 'show'])->name('surveydetail');
+
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::post('/password/update', [ProfileController::class, 'updatePassword'])->name('password.update');
