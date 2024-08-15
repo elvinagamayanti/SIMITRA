@@ -33,6 +33,19 @@
         </div>
 
         <div class="mb-4">
+            <label for="tipe_pembayaran" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tipe Pembayaran</label>
+            <select name="tipe_pembayaran" id="tipe_pembayaran" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" required>
+                <option value="bulanan">Bulanan</option>
+                <option value="per_dokumen">Per Dokumen</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="harga" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Harga</label>
+            <input type="number" name="harga" id="harga" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" required>
+        </div>
+
+        <div class="mb-4">
             <label for="file" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Import Mitra (CSV atau XLS)</label>
             <input type="file" name="file" id="file" class="mt-1 block w-full p-2 border rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 bg-white border-gray-300 focus:border-blue-500 focus:ring-blue-500">
         </div>
