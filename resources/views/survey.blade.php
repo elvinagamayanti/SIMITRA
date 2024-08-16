@@ -47,15 +47,15 @@
                         @foreach($surveys as $index => $survey)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td class="px-6 py-4">{{ $index + 1 }}</td>
-                            <td class="px-6 py-4">{{ $survey['name'] }}</td>
-                            <td class="px-6 py-4">{{ $survey['kode'] }}</td>
-                            <td class="px-6 py-4">{{ $survey['ketua_tim'] }}</td>
-                            <td class="px-6 py-4">{{ $survey['tanggal_mulai'] }}</td>
-                            <td class="px-6 py-4">{{ $survey['tanggal_berakhir'] }}</td>
+                            <td class="px-6 py-4">{{ $survey->name }}</td>
+                            <td class="px-6 py-4">{{ $survey->kode }}</td>
+                            <td class="px-6 py-4">{{ $survey->ketua_tim }}</td>
+                            <td class="px-6 py-4">{{ $survey->tanggal_mulai }}</td>
+                            <td class="px-6 py-4">{{ $survey->tanggal_berakhir }}</td>
                             <td class="px-6 py-4">
                                 <div class="flex space-x-2">
                                     <button onclick="window.location='{{ route('surveydetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                    <button onclick="window.location='{{ route('editpegawai') }}'" class="px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
+                                    <button onclick="window.location='{{ route('editsurvey', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
                                     <button onclick="" class="flex items-center justify-center w-10 h-10 text-red-600 rounded-full hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
