@@ -3,7 +3,7 @@
 @section('content')
 <div class="px-4 py-4 bg-white dark:bg-gray-900">
   <div class="px-4 sm:px-0">
-    <h3 class="text-base font-bold leading-8 text-gray-900 dark:text-gray-100">Detail Survei</h3>
+    <h1 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Detail Survei</h1>
   </div>
   <div class="mt-6 border-t border-gray-100 dark:border-gray-700">
     <dl class="divide-y divide-gray-100 dark:divide-gray-700">
@@ -49,7 +49,7 @@
             <td class="px-6 py-4">212111957</td>
             <td class="px-6 py-4">Bintana Tajmala</td>
             <td class="px-6 py-4">
-              <button class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-500">Nilai</button>
+              <button onclick="window.location='{{ route('penilaian') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-500">Nilai</button>
             </td>
           </tr>
           <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-600">
@@ -57,7 +57,7 @@
             <td class="px-6 py-4">212111941</td>
             <td class="px-6 py-4">Azmira Candra</td>
             <td class="px-6 py-4">
-              <button class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-500">Nilai</button>
+              <button onclick="window.location='{{ route('penilaian') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-500">Nilai</button>
             </td>
           </tr>
           <tr class="bg-white dark:bg-gray-800 border-b dark:border-gray-600">
@@ -65,12 +65,17 @@
             <td class="px-6 py-4">212112287</td>
             <td class="px-6 py-4">Pretty Melati Pardede</td>
             <td class="px-6 py-4">
-              <button class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-500">Nilai</button>
+              <button onclick="window.location='{{ route('penilaian') }}'" class="ml-2 px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-500">Nilai</button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+  </div>
+  <div class="flex justify-between mt-6">
+    <button type="button" onclick="window.history.back()" class="px-6 py-2 text-white bg-gray-600 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-600">
+      Back
+    </button>
   </div>
 </div>
 
