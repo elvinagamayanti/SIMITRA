@@ -74,7 +74,7 @@ class SurveyController extends Controller
     {
         $survey = Survey::find($id);
         if (!$survey) {
-            return redirect()->route('survey')->with('error', 'Survei tidak ditemukan');
+            return redirect()->route('survei')->with('error', 'Survei tidak ditemukan');
         }
         return view('surveydetail', [
             'user' => $this->user,
@@ -116,6 +116,6 @@ class SurveyController extends Controller
             'tanggal_berakhir' => $request->input('tanggal_berakhir'),
         ]);
 
-        return redirect()->route('survey')->with('success', 'Survei berhasil diperbarui.');
+        return redirect()->route('survei')->with('success', 'Survei berhasil diperbarui.');
     }
 }

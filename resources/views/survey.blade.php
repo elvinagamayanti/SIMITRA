@@ -22,7 +22,7 @@
                     <option value="ended">Sudah Berakhir</option>
                 </select>
 
-                <button onclick="window.location='{{ route('addsurvey') }}'" class="inline-flex items-center px-4 py-2 text-white bg-orange-500 border border-transparent rounded-lg shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:bg-orange-600 dark:hover:bg-orange-700">
+                <button onclick="window.location='{{ route('addsurvei') }}'" class="inline-flex items-center px-4 py-2 text-white bg-orange-500 border border-transparent rounded-lg shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:bg-orange-600 dark:hover:bg-orange-700">
                     Tambah Survei
                 </button>
             </div>
@@ -54,8 +54,8 @@
                             <td class="px-6 py-4">{{ $survey->tanggal_berakhir }}</td>
                             <td class="px-6 py-4">
                                 <div class="flex space-x-2">
-                                    <button onclick="window.location='{{ route('surveydetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
-                                    <button onclick="window.location='{{ route('editsurvey', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
+                                    <button onclick="window.location='{{ route('surveidetail', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-800">Lihat</button>
+                                    <button onclick="window.location='{{ route('editsurvei', ['id' => $index + 1]) }}'" class="px-3 py-1 text-white bg-green-600 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 dark:bg-green-700 dark:hover:bg-green-800">Edit</button>
                                     <button onclick="" class="flex items-center justify-center w-10 h-10 text-red-600 rounded-full hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
